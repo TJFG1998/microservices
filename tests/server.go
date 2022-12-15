@@ -4,7 +4,7 @@ import (
 	"log"
 	"net"
 
-	"github.com//TJFG1998/microservices/chat"
+	"github.com/TJFG1998/microservices/tests/chat"
 	"google.golang.org/grpc"
 )
 
@@ -19,9 +19,9 @@ func main() {
 
 	grpcServer := grpc.NewServer()
 
-	chat.RegisterChatServiceServer(grpcServer, &s)
+	chat.RegisterSumServiceServer(grpcServer, &s)
 
-	if err := grpcServer.Serve(lis); err {
+	if err := grpcServer.Serve(lis); err != nil {
 		log.Fatalf("[GRPC][ERORR] %v", err)
 	}
 

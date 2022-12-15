@@ -1,0 +1,17 @@
+syntax = "proto3";
+package chat;
+
+option go_package = "./";
+
+message Message {
+    float number1 = 1;
+    float number2 = 2;
+}
+
+message Response {
+    float sum = 1;
+}
+
+service SumService {
+    rpc Sum2Numbers(Message) returns (Response) {}
+}
