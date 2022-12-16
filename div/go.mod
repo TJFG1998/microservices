@@ -1,4 +1,4 @@
-module github.com/TJFG1998/microservices/tests/chat
+module github.com/TJFG1998/microservices/div
 
 go 1.18
 
